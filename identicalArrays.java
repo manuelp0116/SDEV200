@@ -32,6 +32,7 @@ public class identicalArrays {
         return m;
     }
 
+    /** determines if the 3x3 arrays are equal */
     public static boolean equals ( int[][] m1, int[][] m2) {
         int[] list1 = sort(m1);
         int[] list2 = sort(m2);
