@@ -1,5 +1,6 @@
 package SDEV200.exercise_11_1;
 
+import SDEV200.ToolKit.GeometricObject;
 
 public class Triangle extends GeometricObject {
     private double side1;

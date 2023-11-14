@@ -1,9 +1,12 @@
-package SDEV200.exercise_11_1;
+package SDEV200.ToolKit;
+
+import java.util.Date;
 
 // GeometricObject.java: The abstract GeometricObject class
-public abstract class GeometricObject {
+public abstract class GeometricObject implements Comparable<GeometricObject> {
   private String color = "white";
   private boolean filled;
+  private Date mDateCreated;
 
   /**Default construct*/
   protected GeometricObject() {
@@ -41,4 +44,22 @@ public abstract class GeometricObject {
 
   /**Abstract method getPerimeter*/
   public abstract double getPerimeter();
+
+  public Date getDateCreated() {
+    return mDateCreated;
+  }
+
+
+  //Comparable interface
+  @Override
+  public int compareTo(GeometricObject o) {
+    if (getArea() > o.getArea())
+      return 1;
+
+    else if (getArea() < o.getArea())
+      return -1;
+
+    else
+      return 0;
+  }
 }
